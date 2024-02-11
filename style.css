@@ -1,14 +1,59 @@
 body {
-    background-color:rgb(237, 205, 205);
+    background-color:rgb(181, 181, 181);
+    justify-content: center;
+    align-items: center;
 }
 
-#container {
-    background-color: rgb(64, 121, 170);
+h1{
+    background-color: rgb(60, 110, 154);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    align-items: center;
 }
 
-#header 
-{
-    background-color: rgb(105, 203, 171);
-    color: rgb(164, 178, 190);
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: fantasy;
+}
+
+h3{
+    background-color: rgb(194, 156, 61);
     text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+p{
+    background-color: rgb(194, 194, 194);
+    text-align: center;
+    padding-top: 10px;
+
+
+}
+li{
+    background-color: rgb(204, 202, 202);
+    text-align: center;
+    padding-top: 10px;
+
+
+
+}
+table {
+    background-color: rgb(199, 199, 88);
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+img {
+
+}
+img {
+    height: 400px;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
