@@ -1,0 +1,14 @@
+body {
+    background-color:rgb(237, 205, 205);
+}
+
+#container {
+    background-color: rgb(64, 121, 170);
+}
+
+#header 
+{
+    background-color: rgb(105, 203, 171);
+    color: rgb(164, 178, 190);
+    text-align: center;
+}
