@@ -1,0 +1,22 @@
+body {
+    background-color:rgb(236, 212, 228);
+    justify-content: center;
+    align-items: center;
+    font-family: fantasy;
+    text-align: center;
+}
+fieldset {
+    box-sizing: border-box;
+    margin: 0;
+    padding-top: 3%;
+}
+legend {
+    font-size: 3cap;
+    color: #370b0b;
+}
+label {
+    color: #7c1515;
+}
+form {
+    color: #c20000;
+}

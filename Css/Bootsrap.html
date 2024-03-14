@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HTML opetussivu</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style3.css" />
+
+    </head>
+    <body>
+<!--tässä tehdään navbar-->
+        <nav class="navbar navbar-expand-lg. bg-dark navbar-dark py-3 fixed-top">
+            <div class="container">
+              <a class="navbar-brand" href="#">HTML opetussivu</a>
+<!--tässä tehdään nappi-->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#kotisivu">Kotisivu</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#historiaa html">Historiaa HTML kielestä</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#tagit">Tagit</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Kysymyksiä">Kysymyksiä</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#linkit">Linkit aiempiin töihin</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+        <!--Tässä tehdään Showcase-->
+        <section class="text-light bg-dark text-center p-5 text-sm-start">
+            <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div>
+                    <h1>Opas <span class="text-success">HTML</span> sivujen ymmärtämiseen</h1>
+                    <p class="lead my-4">
+                        Tämä sivu toivottavasti auttaa sinua hahmottamaan mikä HTML kieli on ja miten rakentaa nettisivuja. 
+                        Sivulla perehdytään html-kielen perusideoihin sekä html-kielen avulla nettisivun sisällön luomiseen.
+                    </p>
+                    <a href="#linkit">
+                        <button class="btn btn-primary btn-lg active">Aiemmat työni</button>
+                    </a>
+                </div>
+                <img class="img-fluid w-50 d-sm-block d-none"src="image.png" alt=""/>
+            </div>
+        </div>
+        </section>
+        <!--Bootsrap crip-->
+        <!--Boxes-->
+        <section class="p-5">
+            <div class="container">
+                <div class="row text-center g-4">
+                    <div class="col-md">
+                        <div class="card bg-dark text-light">
+                            <div class="h1 md-3">
+                                <i class="bi bi-laptop"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                HTML-sivun rakenteen luominen
+                            </h3>
+                            <p class="card-text">
+                                Html-dokumentti voidaan kirjoittaa tekstinkirjoitusohjelmassa 
+                                tai koodieditorilla ja tallentaa minne vain tietokoneessa 
+                                ja tiedoston voi avata selaimella. Kun html-tiedosto halutaan 
+                                näyttää internetissä, täytyy tiedostot siirtää http-palvelimelle.
+                                Html-tiedoston pääte on html. Tiedostonimet kirjoitetaan pienellä eikä 
+                                niissä käytetä ääkkösiä eikä muita erikoismerkkejä.
+                            </p>
+                            <a href="#" class="btn btn-primary">Lue lisää</a>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="card bg-success text-light">
+                            <div class="h1 md-3">
+                                <i class="bi bi-person-square"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                HTML-sivun tagit
+                            </h3>
+                            <p class="card-text">
+                                HTML-dokumentissa rakenne merkitään käyttämällä elementtejä eli tageja. 
+                                Html-tiedoston ensimmäiselle riville määritellään dokumenttityyppi doctype-tagilla.
+                                Kaikki koodin sisältö laitetaan html-tagin sisään.
+                                Myöhemmin sivulla kerrotaan lisää mitä tageja on olemassa 
+                                Selain ei näytä itse html-koodin tageja vaan tagit ohjeistaa 
+                                selainta miten niiden sisällöt näkyvät.  
+                            </p>
+                            <a href="#" class="btn btn-primary">Lue lisää</a>
+                        </div>
+                    </div>       
+                </div>
+            </div>
+        </section>
+<!--Tieto sivut-->
+        <section id="rakenteen luominen"class="p-5">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-md">
+                        <img src="image4.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md p-5" id = "historiaa html">
+                        <h2>Opi historiaa HTML kielestä</h2>
+                        <p class="lead">
+                            Html-kieli on tarkoitettu alunperin tekstin muokkausta 
+                            varten eli kuinka teksti näkyy lukijalle. Nykyään nettisivut tukevat 
+                            monipuolisempaa sisältöä kuten videoita, lomakkeita jne.
+                        </p>
+                        <p>Sivun muoto, koko, värit, fontin, kuvien koot ja paikat kuvataan CSS-kielellä. 
+                            CSS-tyylit kirjoitetaan yleensä omaan erilliseen tiedostoon ja 
+                            liitetään nettisivulle. Html-kielellä määritellään siis nettisivun sisällön 
+                            rakenne, mutta sisällön tyylittelyt luodaan CSS-kielellä.
+                        </p>
+                        <a href="" class="btn btn-light mt-3">
+                            <i class="bi bi-chevron-right"></i> Lue lisää
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="tagit"class="p-5 bg-dark text-light">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-md p-5">
+                        <h2>Opi Tagit ulkoa</h2>
+                        <p class="lead">
+                            HTML-tageja on monta. Tällä sivulla käymme läpi vain pari 
+                            aloittelijalle hyödyllistä tagia. Tageilla pystyt muokkaamaan nettisivuasi. 
+                            Niitä voi ajatella maalina, jolla sinä maalarina teet taideteoksen.
+                        </p>
+                        <p>Html-kieli on tekstin muotoiluun tarkoitettu kieli, 
+                            jonka avulla kuvaillaan, kuinka teksti näkyy lukijalle.
+                            Muotoilu tapahtuu tagien (elementtien) ja niihin liittyvien parametrien avulla. 
+                            Selain ei näytä tageja ruudulla, vaan tulkitsee niiden avulla, 
+                            miten tekijä haluaa sivun näkyvän. Tagi on alkaa aina < -merkillä ja 
+                            loppuu > -merkillä. 
+                        </p>
+                        <a href="" class="btn btn-light mt-3">
+                            <i class="bi bi-chevron-right"></i> Lue lisää
+                        </a>
+                    </div>
+                    <div class="col-md">
+                        <img src="image2.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!--tagi tieokuplat-->
+        <section id="tagit" class="p-5 bg-success">
+            <div class="container">
+                <h2 class="text-center text-white">Opeteltavat tagit</h2>
+                <p class="lead text-center text-white mb-5">
+                    On tärkeätä oppia kaikki tagit!
+                </p>
+                <div class="row g-4">
+<!--eka tagi-->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <img src="" class="rounded-circle mb-3" alt=""/>
+                                <h3 class="card-title mb-3">HTML</h3>
+                                <p class="card-text">
+                                    HTML tagi aloittaa sivun ja lopettaa sen. 
+                                    Se on pakollinen ja näkyy jokaisen nettisivun koodissa. 
+                                    HTML-tagilla kerrotaan selaimelle että kyseessä on html-tiedosto. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+<!--toka tagi-->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <img src="" class="rounded-circle mb-3" alt=""/>
+                                <h3 class="card-title mb-3">HEAD</h3>
+                                <p class="card-text">
+                                    HEAD tagi sijoitetaan HTML tagin ja BODY tagin väliin. 
+                                    HEAD tagia käytetään määrittämään otsikko osa. 
+                                    Sen koodeissa ei näy visuaalista tulostusta, 
+                                    mutta sitä suositellaan käyttämään koodatessa nettisivuja.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+<!--kolmas tagi-->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <img src="" class="rounded-circle mb-3" alt=""/>
+                                <h3 class="card-title mb-3">BODY</h3>
+                                <p class="card-text">
+                                    Body-tagi on sisältö osa, minkä sisälle määritellään kaikki se sisältö, 
+                                    joka näkyy sivulla. BODY sisältää kaiken HTML-dokumentin sisällön, 
+                                    kuten otsikot, kappaleet, kuvat, hyperlinkit, taulukot, luettelot jne.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+<!--neljäs tagi-->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <img src="" class="rounded-circle mb-3" alt=""/>
+                                <h3 class="card-title mb-3">P</h3>
+                                <p class="card-text">
+                                    Jos haluat nettisivulle paljon tekstiä, 
+                                    sinun pitää käyttää P-tagia. P-tagi määrittää kappaleen. 
+                                    Selaimet lisäävät automaattisesti yhden tyhjän rivin jokaisen 
+                                    P-tagin eteen ja jälkeen. P-tagit ovat erittäin tärkeitä.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+<!--viides-->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <img src="" class="rounded-circle mb-3" alt=""/>
+                                <h3 class="card-title mb-3">IMG</h3>
+                                <p class="card-text">
+                                    IMG-tagilla nettisivulle pystyy laittaa kuvia. 
+                                    IMG-tagilla määritellään itse kuva. Sitä voi käyttää ilman figure-tagia. 
+                                    IMG tagissa parametri src on tarpeellinen ja sen sisään kirjoitetaan paikka, 
+                                    jossa kuva sijaitsee
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+<!--kuudes-->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <img src="" class="rounded-circle mb-3" alt=""/>
+                                <h3 class="card-title mb-3">A</h3>
+                                <p class="card-text">
+                                    A-tagia eli (ankkuritunnistetta) käytetään hyperlinkin 
+                                    luomiseen verkkosivulle. Sen avulla voit siis laittaa 
+                                    linkkejä haluamillesi nettisivuille. Linkin voi myös luoda jo 
+                                    sinun tekemälle nettisivulle. Se tehdään laittamalla tiedoston 
+                                    nimi href-parametrin sisään.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+<!--seitsemäs-->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <img src="" class="rounded-circle mb-3" alt=""/>
+                                <h3 class="card-title mb-3">BR</h3>
+                                <p class="card-text">
+                                    Jos haluat vaihtaa riviä sinun pitää käyttää BR-tagia. 
+                                    Tagia käyttäessä yhdistetään aloitus-ja lopputagi. 
+                                    Jos haluat tekstisi näyttävän hyvältä BR-tagin käyttö on erityisen tärkeää.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+<!--kahdeksas-->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <img src="" class="rounded-circle mb-3" alt=""/>
+                                <h3 class="card-title mb-3">H1</h3>
+                                <p class="card-text">
+                                    H1-tagi on otsikkoelementti. Otsikkoelementtejä on
+                                     H1, H2, H3, H4, H5, H6. 
+                                    Näitä käytetään määrittämään verkkosivun otsikot ja alaotsikot 
+                                    HTML:ssä. Otsikkotunnisteet tukevat myös tapahtumaattribuutteja, 
+                                    kuten onclick jne.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!--Kysymys section-->
+        <section id="Kysymyksiä"class="p-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Usein kysytyt kysymykset</h2>
+                <div class="accordion accordion-flush" id="Kysymyksiä">
+        <!-- kysymys 1-->
+                    <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kysymys-One">
+                            Mikä on HTML?
+                        </button>
+                    </h2>
+                    <div id="kysymys-One" class="accordion-collapse collapse" data-bs-parent="#Kysymyksiä">
+                        <div class="accordion-body">HTML tulee sanoista HyperText Markup Language. 
+                            Se on vuonna 1993 julkaistu standardi tekstinmuotoilukieli, 
+                            jota käytetään web-sivujen kehittämiseen. 
+                            HTML on selaimen tulkitsema kieli, 
+                            joka kertoo selaimelle mitä tehdä ja miten se pitää näyttää.</div>
+                    </div>
+                    </div>
+        <!--kysymys 2-->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kysymys-Two">
+                            Mitä tagit ja attribuutit ovat HTML:ssä?
+                        </button>
+                        </h2>
+                        <div id="kysymys-Two" class="accordion-collapse collapse" data-bs-parent="#Kysymyksiä">
+                        <div class="accordion-body">Tagit ovat HTML:n ensisijainen komponentti, 
+                            joka määrittää, miten sisältö rakennetaan/muotoillaan, 
+                            kun taas attribuutteja käytetään HTML-tunnisteiden kanssa 
+                            tagin ominaisuuksien määrittämiseen. </div>
+                        </div>
+                    </div>
+        <!--kysymys 3-->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kysymys-Three">
+                            Mitä ovat tyhjät tagit HTML:ssä?
+                        </button>
+                        </h2>
+                        <div id="kysymys-Three" class="accordion-collapse collapse" data-bs-parent="#Kysymyksiä">
+                        <div class="accordion-body">HTML-tagit, joissa ei ole sulkevia tunnisteita 
+                            tai joita ei tarvitse sulkea, ovat Void-elementtejä. Esimerkiksi BR, IMG, HR</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!--Linkit edellisiin tehtäviin-->
+<!--Footer-->
+        <footer class="p-5 bg-dark text-white text-center position-relative">
+            <div class="container">
+                <p class="lead" id="linkit">Aiempien töiden linkit</p>
+                <a href="nettisivu.html">Nettisivu tehtävä</a>
+                <a href="Form.html">Form tehtävä</a>
+                </div>
+            </div>
+        </footer>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,210 @@
+/* Basic Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Styles */
+
+.lcircle {
+    background-color: rgb(255, 255, 255);
+    height: 1000px;
+    width: 1000px;
+    border-radius: 100%;
+    z-index: -2;
+    position: absolute;
+    top: -100px;
+    right: -250px;
+    box-shadow: -4px 20px 80px rgba(0, 0, 0, 0.12);
+    /* box-shadow: -13px 16px 80px rgba(75, 255, 73, 0.32); */
+    border: 1px solid rgba(75, 255, 73, 0.32);
+    display: flex;
+    justify-content: space-around;
+}
+
+.lcircle .pcircle {
+    background-color: rgb(255, 255, 255);
+    height: 480px;
+    width: 480px;
+    /* border: 1px solid rgba(0, 0, 0, 0.02); */
+    border-radius: 100%;
+    position: absolute;
+    top: 260px;
+    right: 350px;
+    /* box-shadow: -17px 11px 60px rgba(2, 1, 3, 0.04); */
+    box-shadow: -17px 11px 60px rgba(159, 64, 255, 0.19);
+    border: 1px solid rgba(159, 64, 255, 0.1);
+    padding: 45px;
+}
+
+.pcircle .ccircle {
+    background: url('/Users/sohvi/Documents/KOULU/html/IMG/image1 kopio.png');
+    /* background-size: 620px; */
+    background-size: cover;
+    height: 390px;
+    width: 390px;
+    border-radius: 100%;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 45px 8%;
+}
+
+.nav .search {
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    width: 55px;
+    cursor: pointer;
+    height: 55px;
+    border-radius: 100%;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.09);
+}
+
+.search img {
+    width: 25px;
+}
+
+.scircle {
+    background-color: rgb(255, 255, 255);
+    height: 230px;
+    width: 230px;
+    border-radius: 100%;
+    z-index: -2;
+    margin-top: -80px;
+    margin-left: 4vw;
+    /* box-shadow: 6px 20px 80px rgba(0, 0, 0, 0.12); */
+    box-shadow: 6px 20px 80px rgba(255, 49, 49, 0.48);
+    border: 1px solid rgba(255, 49, 49, 0.2);
+    opacity: 0.5;
+}
+
+.scircle p {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 5rem;
+    font-weight: 600;
+    margin: 0.58em 0 0 1em;
+}
+
+p.quote {
+    color: #95989A;
+    opacity: 0.8;
+    font-size: 22px;
+    line-height: 1.5;
+    max-width: 370px;
+    letter-spacing: 0.2px;
+    margin-left: 15%;
+}
+
+.button {
+    background: rgba(39, 125, 234, 1);
+    height: 60px;
+    width: 230px;
+    border-radius: 40px;
+    margin: 4.5em 0 0 0;
+    margin-left: 20%;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgba(94, 185, 255, 0.5);
+    cursor: pointer;
+}
+
+.button:active {
+    box-shadow: 0 0 0;
+}
+
+.backnforth {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 180px;
+    margin: 4em 0 0 0;
+    margin-left: 35%;
+}
+
+.backnforth img {
+    width: 15px;
+}
+
+.back,
+.next {
+    background-color: rgb(255, 255, 255);
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.back:active,
+.next:active {
+    box-shadow: 0 0 0;
+}
+
+.back {
+    box-shadow: -8px 7px 28px rgba(0, 0, 0, 0.07);
+}
+
+.next {
+    box-shadow: 13px 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.prevAnim {
+    animation: removeNew 2s;
+    transform-origin: 560px center;
+}
+
+.nextAnim {
+    animation: addNew 2s;
+    transform-origin: 560px center;
+}
+
+@keyframes addNew {
+    0% {
+        transform: rotate(0deg) translate(0, 0);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg) translate(0, 0);
+    }
+}
+
+@keyframes removeNew {
+    0% {
+        transform: rotate(0deg) translate(0, 0);
+    }
+    50% {
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(-360deg) translate(0, 0);
+    }
+}

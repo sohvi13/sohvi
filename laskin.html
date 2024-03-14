@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Valitse numerot ja laske</title>
+    </head>
+    <body>
+        <!-- Placeholder for displaying random numbers -->
+        <p>Randomi numero: <span id="randomNumber1"></span></p>
+        <p>Randomi numero: <span id="randomNumber2"></span></p>
+
+        <script>
+        // Function to generate random number between min and max (inclusive)
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        // Generate random numbers between 1 and 10
+        var randomNumber1 = getRandomNumber(1, 10);
+        var randomNumber2 = getRandomNumber(1, 10);
+
+        // Display the random numbers on the page
+        document.getElementById('randomNumber1').textContent = randomNumber1;
+        document.getElementById('randomNumber2').textContent = randomNumber2;
+        </script>
+
+        <div class="container">
+            <h2>Valitse numerot ja laske</h2>
+            <!-- Input fields for numbers -->
+            <input type="number" id="num1" placeholder="Laita numero 1" min="1" max="10">
+            <input type="number" id="num2" placeholder="Laita numero 2" min="1" max="10">
+           
+
+            <!-- Dropdown menu for selecting operation -->
+            <select id="operation">
+            <option value="add">(+)</option>
+            <option value="subtract">(-)</option>
+            <option value="multiply">(*)</option>
+            <option value="divide">(/)</option>
+            </select>
+
+            <!-- Button to calculate -->
+            <button id="calculate">Laske</button>
+
+            <!-- Display the result -->
+            <p id="result"></p>
+
+<script>
+  // Function to perform calculation based on selected operation
+  function calculate() {
+    // Get the values from input fields
+    var num1 = parseFloat(document.getElementById('num1').value);
+    var num2 = parseFloat(document.getElementById('num2').value);
+    // Get the selected operation from the dropdown
+    var operation = document.getElementById('operation').value;
+    var result;
+
+    // Perform calculation based on selected operation
+    switch(operation) {
+      case 'add':
+        result = num1 + num2;
+        break;
+      case 'subtract':
+        result = num1 - num2;
+        break;
+      case 'multiply':
+        result = num1 * num2;
+        break;
+      case 'divide':
+        result = num1 / num2;
+        break;
+      default:
+        result = "Numerot on laitettu väärin";
+    }
+
+    // Display the result
+    document.getElementById('result').innerText = "Vastaus: " + result;
+  }
+
+  // Event listener for the "Calculate" button
+  document.getElementById('calculate').addEventListener('click', calculate);
+</script>
+
+    </body>
+
+</html>
