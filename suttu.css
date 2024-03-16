@@ -1,0 +1,60 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    max-width: 800px; /* Lisää maksimileveys tähän */
+    margin: 0 auto; /* Keskitä carousel sivulle */
+    margin-top: auto; /* Move the carousel downwards */
+    height: 100vh; /* Aseta korkeus näytön korkeuteen, jotta sisältö on keskitetty pystysuunnassa */
+  }
+  .starting-text {
+    align-items: center;
+    left: 50%;
+    text-align: center;
+  }
+  
+  .slides {
+    display: flex;
+    justify-content: center; /* Keskittää kuvat vaakasuunnassa */
+  }
+  
+  .slides img {
+    max-width: 100%; /* Rajoita kuvien leveys */
+    max-height: 400px; /* Rajoita kuvien korkeus */
+    width: 100%;
+    display: block;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    bottom: 20px; /* Adjust the distance from the bottom as needed */
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .prev {
+    left: 0; /* Adjust the distance from the left as needed */
+  }
+  
+  .next {
+    right: 0; /* Adjust the distance from the right as needed */
+  }
+  
+  .play {
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100% - 40px); /* Tässä asetetaan Play-painikkeen sijainti suhteessa kuvan alareunaan */
+  }
+  
+  .carousel-info {
+    position: absolute;
+    bottom: 10px; /* Sijainti kuvan alapuolella */
+    text-align: center; /* Tekstin keskittäminen */
+    width: 100%; /* Tekstin leveys täyttää kuvan leveyden */
+  }
+  
