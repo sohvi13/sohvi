@@ -1,54 +1,45 @@
 <!DOCTYPE html>
-<html lang="fi">
-    <head>
-        <title>Google Kartta</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/x-icon" href="file:///Käyttäjät/sohvi/Dokumentit/KOULU/html/IMG/favicon.ico">
-        <link type="text/css" href="Css/style4.css">
-        <!--Bootstrap css-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
-        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
-        crossorigin="anonymous">
-    </head>
-    <body>
-    <!--Runko tehty-->
-    <!--tehdään frame element-->
-    <div class="container">
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps?q=Yliopistonkatu 36 Lappeenranta&output=embed"
-            width="800" height="600" style="border:0;" allowfullscreen="" 
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="Css/style4.css">
+    <title>Google Kartta Esimerkki</title>
+    <!--Bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP
+    +JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+  </head>
+  <body>
+    <div>
+      <h1>Syötä tiedot</h1>
+      <label for="textField1">Katuosoite:</label>
+      <input type="text" id="textField1" name="textField1" placeholder="Yliopistonkatu 36"><br><br>
+
+      <label for="textField2">Kaupunki:</label>
+      <input type="text" id="textField2" name="textField2" placeholder="Lappeenranta"><br><br>
+      <button onclick="searchForm()">Hae</button>
     </div>
-         <!--kaksi tekstikenttää ja button-->
-         <div class="container">
-            <div class="input-container">
-                <label for="name">Katuosoite:</label>
-                <input type="text" id="katuosoite">
-                <label for="name">Kaupunki:</label>
-                <input type="text" id="kaupunki">
-                <!--Lisätään button elementti-->
-                <button type="button"onclick="paivitaKartta()">Hae</button>
-            </div>
-        </div>
-        <script defer src="Js/helloworld.js"></script>
-            <!--Lisää Hae-painikkeelle onclick-tapahtumakäsittelijä.-->
-            <script>
-                function paivitaKartta() {
-                    var katuosoite = document.getElementById('katuosoite').value;
-                    var kaupunki = document.getElementById('kaupunki').value;
-                    var karttaIframe = document.getElementById('karttaIframe');
-                    var osoite = encodeURIComponent(katuosoite + ' ' + kaupunki);
-                    var karttaUrl = 'https://www.google.com/maps?q=' + osoite + '&output=embed';
-                    karttaIframe.src = karttaUrl;
-                }
-                // Päivitä kartta sivun latauksen yhteydessä
-                window.onload = function() {
-                    document.getElementById('katuosoite').value = 'Yliopistonkatu 36';
-                    document.getElementById('kaupunki').value = 'Lappeenranta';
-                    paivitaKartta();
-                };
-            </script>
+      
+
+    <div id="map-container">
+      <iframe id="map-iframe" 
+      src="https://www.google.com/maps?q=Yliopistonkatu%2036%20Lappe
+      enranta&output=embed" 
+      width="600" 
+      height="450" 
+      frameborder="0" 
+      style="border:0;" 
+      allowfullscreen="" 
+      aria-hidden="false" 
+      tabindex="0">
+      </iframe>
+    </div>
+    <script defer src="Js/helloworld.js"></script>
     </body>
-</html>
+  </html>
